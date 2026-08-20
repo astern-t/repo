@@ -1,5 +1,4 @@
 import React from 'react';
-import { X, User, Edit } from 'lucide-react';
 
 export default function StaffDetailsModal({ isOpen, onClose, staff, onEdit }) {
   if (!isOpen || !staff) return null;
@@ -17,12 +16,11 @@ export default function StaffDetailsModal({ isOpen, onClose, staff, onEdit }) {
     <div className="modal-overlay">
       <div className="modal-card">
         <div className="modal-header">
-          <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <User size={20} color="#3b82f6" />
-            Staff Member Details
+          <h2>
+            Staff Details
           </h2>
-          <button className="btn-icon" onClick={onClose}>
-            <X size={20} />
+          <button className="btn-icon" onClick={onClose} style={{ fontSize: '1.25rem', lineHeight: 1 }}>
+            &times;
           </button>
         </div>
 
@@ -102,7 +100,6 @@ export default function StaffDetailsModal({ isOpen, onClose, staff, onEdit }) {
                 onEdit(staff);
               }}
             >
-              <Edit size={14} />
               Edit Staff
             </button>
           )}

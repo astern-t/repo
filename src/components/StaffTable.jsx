@@ -1,5 +1,4 @@
 import React from 'react';
-import { Eye, Edit, Trash2 } from 'lucide-react';
 
 export default function StaffTable({ staffList, onView, onEdit, onDelete }) {
   const getBadgeClass = (status) => {
@@ -53,27 +52,27 @@ export default function StaffTable({ staffList, onView, onEdit, onDelete }) {
                 </span>
               </td>
               <td style={{ textAlign: 'right' }}>
-                <div style={{ display: 'inline-flex', gap: '0.25rem' }}>
+                <div style={{ display: 'inline-flex', gap: '0.5rem' }}>
                   <button
-                    className="btn-icon"
+                    className="btn btn-secondary"
                     onClick={() => onView(member)}
-                    title="View details"
+                    style={{ padding: '0.25rem 0.5rem', fontSize: '0.8rem' }}
                   >
-                    <Eye size={16} color="#3b82f6" />
+                    View
                   </button>
                   <button
-                    className="btn-icon"
+                    className="btn btn-secondary"
                     onClick={() => onEdit(member)}
-                    title="Edit staff"
+                    style={{ padding: '0.25rem 0.5rem', fontSize: '0.8rem' }}
                   >
-                    <Edit size={16} color="#059669" />
+                    Edit
                   </button>
                   <button
-                    className="btn-icon"
+                    className="btn btn-danger"
                     onClick={() => onDelete(member)}
-                    title="Delete staff"
+                    style={{ padding: '0.25rem 0.5rem', fontSize: '0.8rem' }}
                   >
-                    <Trash2 size={16} color="#dc2626" />
+                    Delete
                   </button>
                 </div>
               </td>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { X, Search } from 'lucide-react';
 
 export default function UpdateByEmailModal({ 
   isOpen, 
@@ -18,10 +17,6 @@ export default function UpdateByEmailModal({
       setError('Please enter a staff email address');
       return;
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
-      setError('Please enter a valid email address');
-      return;
-    }
     setError('');
     onSearchEmail(email.trim());
   };
@@ -31,8 +26,8 @@ export default function UpdateByEmailModal({
       <div className="modal-card" style={{ maxWidth: '480px' }}>
         <div className="modal-header">
           <h2>Update Staff by Email</h2>
-          <button className="btn-icon" onClick={onClose} disabled={isLoading}>
-            <X size={20} />
+          <button className="btn-icon" onClick={onClose} disabled={isLoading} style={{ fontSize: '1.25rem', lineHeight: 1 }}>
+            &times;
           </button>
         </div>
 
@@ -75,7 +70,6 @@ export default function UpdateByEmailModal({
               className="btn btn-primary"
               disabled={isLoading}
             >
-              <Search size={14} />
               {isLoading ? 'Searching...' : 'Find & Edit Staff'}
             </button>
           </div>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
 
 export default function StaffFormModal({ 
   isOpen, 
@@ -104,8 +103,8 @@ export default function StaffFormModal({
       <div className="modal-card">
         <div className="modal-header">
           <h2>{isEditing ? 'Edit Staff Member' : 'Add New Staff Member'}</h2>
-          <button className="btn-icon" onClick={onClose} disabled={isLoading}>
-            <X size={20} />
+          <button className="btn-icon" onClick={onClose} disabled={isLoading} style={{ fontSize: '1.25rem', lineHeight: 1 }}>
+            &times;
           </button>
         </div>
 

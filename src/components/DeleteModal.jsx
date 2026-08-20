@@ -1,5 +1,4 @@
 import React from 'react';
-import { AlertTriangle } from 'lucide-react';
 
 export default function DeleteModal({ isOpen, onClose, onConfirm, staffName, isLoading }) {
   if (!isOpen) return null;
@@ -8,8 +7,7 @@ export default function DeleteModal({ isOpen, onClose, onConfirm, staffName, isL
     <div className="modal-overlay">
       <div className="modal-card" style={{ maxWidth: '440px' }}>
         <div className="modal-header" style={{ borderBottom: 'none' }}>
-          <h2 style={{ color: 'var(--danger)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <AlertTriangle size={22} />
+          <h2 style={{ color: 'var(--danger)' }}>
             Delete Staff Member?
           </h2>
         </div>

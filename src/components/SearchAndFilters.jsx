@@ -1,5 +1,4 @@
 import React from 'react';
-import { Search, RotateCcw } from 'lucide-react';
 
 export default function SearchAndFilters({ 
   searchQuery, 
@@ -19,7 +18,6 @@ export default function SearchAndFilters({
   return (
     <div className="controls-card">
       <div className="search-box">
-        <Search className="search-icon" size={18} />
         <input
           type="text"
           className="search-input"
@@ -98,7 +96,6 @@ export default function SearchAndFilters({
               onClick={onClearFilters}
               style={{ width: '100%' }}
             >
-              <RotateCcw size={14} />
               Clear Filters
             </button>
           </div>
